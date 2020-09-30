@@ -1,0 +1,23 @@
+Lista 3 (Operadores Condicionais)
+
+1 - Escreva um script que receba um nome de arquivo como parâmetro de linha de comando e, usando apenas uma linha de comando e operadores condicionais (&& e || ) imprima SIM caso o arquivo exista e NAO, caso contrário.
+
+2 - Escreva um script que peça para o usuário digitar 3 nomes de arquivo e imprima o nome daquele que possui o maior número de linhas.
+
+3 - Escreva um script que receba três nomes de arquivos como argumentos de linha de comando e imprima estes nomes em ordem crescente de número de linhas.
+
+4 - Escreva um script que receba três nomes de diretórios como argumentos de linha de comando e imprima estes nomes em ordem crescente de quantidade de arquivos.
+
+5 - Escreva um script que recebe o nome de um arquivo como argumento de linha de comando e imprime GOOD caso este arquivo exista e possua mais que 5 linhas.
+
+6 - Escreva um script que recebe o nome de 3 arquivos como parâmetros de linha de comando e pede para o usuário digitar uma palavra (denominada texto proibido). Imprima na tela o NOME dos arquivos que possuem este texto proibido, e mova estes arquivos (que possuem o texto proibido) para a pasta /tmp.
+
+7 - Escreva um script que use o comando id para verificar se o mesmo foi executado com usuário root. Caso positivo, deve exibir uma mensagem de erro e sair do script. use substituição de shell e os  operadores condicionais (&& e || ) para resolver este problema em apenas uma linha.
+
+8 - [PESQUISA] Quando usamos o pipe (|) para conectar dois ou mais comandos, a variável $? toma o valor de sucesso ou falha do último comando da sequência. Como verificar o sucesso/falha dos outros comandos na sequência do pipe.
+
+Exemplo de sequência:
+    cat a.txt | tr ‘.’ ‘,’ | sort | grep -v “x”
+
+como saber o retorno (sucesso/falha) dos comandos sort e tr?
+
