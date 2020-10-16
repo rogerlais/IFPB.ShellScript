@@ -1,0 +1,33 @@
+Lista 2 (Aritmética no Shell)
+
+1 - Escreva um script que peça para o usuário digitar um número inteiro. Armazene este número da variável a. Faça a variável a receber o valor a + 1. Imprima na tela o valor de a.
+
+2 - Escreva um script que receba dois números inteiros como argumentos de linha de comando, digamos a e b, e imprima o primeiro elevado ao segundo, ou seja a elevado a b. 
+
+Exemplo:
+./pow.sh 4 2
+16
+
+3 - Escreva um script que peça para o usuário digitar um número e diga se este número é par ou ímpar.
+
+4 - Escreva um script que recebe 3 nomes de arquivo como parâmetros de linha de comando, checa se estes arquivos existem (caso não exista algum, deve sair do programa), e imprime a soma dos números de linhas dos 3 arquivos. Utilize substituição de shell e o comando wc -l para contar o número de linhas de cada arquivo.
+
+5 - Escreva um script que recebe 3 nomes de diretórios como parâmetros de linha de comando, checa se estes diretórios existem (caso não exista algum, deve sair do programa), e imprime a soma do número arquivos (ou diretórios) dentro dos diretórios passados. Utilize substituição de shell e o comando ls | wc -l para contar o número de arquivos de cada diretório.
+
+6 - Escreva um script que use o arquivo /etc/passwd para contar o número de usuários do sistema. Adicionalmente, use grep, wc -l e substituição de shell para verificar quantos usuários usam /bin/bash como interpretador de comandos padrão. Use aritmética do shell para calcular quantos usuários não usam /bin/bash como interpretador de comandos padrão.
+
+7 - Escreva um script que soma 3 números passados como argumentos de linha de comando.
+
+8 - [OPCIONAL] Escreva um script que melhore o script da questão anterior para que funcione com números fracionários.
+
+Exemplo:
+./soma3.sh 1.2 2.3 3.4
+6.9
+
+9 - [OPCIONAL] Escreva um script que recebe dois números inteiros como parâmetros de linha de comando, digamos a e b, e imprime a porcentagem que a é de b e a porcentagem que b é de a.
+
+Exemplo:
+./pp.sh 9 100
+9% 1111.11%
+
+10 - [OPCIONAL] O comando sleep faz o computador esperar por X segundos antes de realizar o próximo comando. Escreva um script chamado sleep_mili que faz o computador esperar por Y milisegundos. DICA: O comando sleep aceita números fracionários como parâmetro.

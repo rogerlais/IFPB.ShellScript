@@ -1,8 +1,22 @@
 #!/bin/bash
 
-fname="./sc04-01.sh"
+clear
+echo "Escreva um script que recebe 3 nomes de arquivo como parâmetros de linha de comando,"
+echo "checa se estes arquivos existem (caso não exista algum, deve sair do programa), e imprime a soma dos números de linhas dos 3 arquivos."
+echo "Utilize substituição de shell e o comando wc -l para contar o número de linhas de cada arquivo."
+echo $PWD
 
-ft1=[ test -f ${fname} ] && BOOL=0 || BOOL=1
+f1="./Lista02.EAD/sc04-02.sh"
+f2="./Lista02.EAD/sc04-02.sh"
+f3="./Lista02.EAD/sc04-02.sh"
+
+[ -f $f1  ] && [ -f $f2  ] && [ -f $f3  ] && inputTest=true || inputTest=false
+
+if [[ "$inputTest" == false ]]; then
+    echo 'Ao menos um dos arquivos está faltando'
+    exit
+fi
+
 ft2="$(test -f "${2}")"
 ft3="$(test -f "${3}")"
 echo ${ft1}

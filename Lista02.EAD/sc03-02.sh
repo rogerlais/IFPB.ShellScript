@@ -6,5 +6,5 @@ if [ ret -eq 0 ]
 then
     echo "O valor ${value} é par"
 else
-        echo "O valor ${value} é ímpar"
+    echo "O valor ${value} é ímpar"
 fi
