@@ -1,0 +1,15 @@
+1 - Escreva um script que imprima uma frase motivacional.
+
+2 - Escreva um script que pergunte ao usuário o nome de 3 diretórios e liste todos os arquivos destes 3 diretórios.
+
+3 - Melhore o script anterior para que os nomes dos 3 diretórios sejam passados por parâmetros de linha de comando.
+
+4 - Melhore o script anterior para que, em vez de imprimir na tela os arquivos, salve esta lista no arquivo /tmp/que_lista_linda.txt
+
+5 - Escreva um script que: crie um diretório /bin/DATA onde DATA deve ser a data atual do sistema obtida a partir do comando date (no formato ano-mes-dia); e copie todos os arquivos do diretório atual para este novo diretório.
+
+6 - Melhore o script anterior para que este compacte o novo diretório criado, removendo este diretório após a sua compactação. (o arquivo compactado deve ser copiado para o diretório inicial (o diretório atual, no caso).
+
+7 - Escreva um script que recebe 3 nomes de arquivo como parâmetros de linha de comando. Use a variável A para armazenar informações sobre o primeiro arquivo passado. Isto deve ser feito usando o comando ls -l e substituição de shell. Faça o mesmo com as variáveis B e C (e os arquivos 2 e 3). Usando substituição de variáveis e redirecionadores, salve o conteúdo das variáveis A, B e C no arquivo info.txt.
+
+8 - Escreva um script que imprime os conceitos de substituição de variáveis e de substituição de shell, com exemplos.
