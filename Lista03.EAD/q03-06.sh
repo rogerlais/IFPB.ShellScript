@@ -19,11 +19,22 @@ if [[ -v "${DBG_ENV}" ]]; then
     f3="${PWD}/dados/dado3.txt"
 fi
 
-read forbiden -p "Informa a palavra proibida: "
+read -p "Informa a palavra proibida: " forbiden
+echo "Procurando por: ${forbiden}"
 
-if grep -q ${forbiden } ${f1}; then
+if grep -q -w ${forbiden} ${f1}; then
     echo "Palavra encontrada em ${f1}"
     mv ${f1} /tmp
+fi
+
+if grep -q -w ${forbiden} ${f2}; then
+    echo "Palavra encontrada em ${f2}"
+    mv ${f2} /tmp
+fi
+
+if grep -q -w ${forbiden} ${f3}; then
+    echo "Palavra encontrada em ${f3}"
+    mv ${f3} /tmp
 fi
 
 
