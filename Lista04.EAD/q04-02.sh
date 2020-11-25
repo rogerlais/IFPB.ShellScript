@@ -15,13 +15,14 @@ DESC
 export DBG_ENV="DBG"
 if [[ -v "${DBG_ENV}" ]]; then
     #Ajuste de depuracao
-    echo 'nada' | \\dev\\nul
+    basedir="${PWD}/Lista04.EAD/"
+else
+    basedir='./'
 fi
 clear
 
-me=`basename "${@}"`
-echo "calculo em ${me}"
-
-bc < a.txt
+inputFile="${basedir}a.txt"
+echo "Avaliando ${inputFile}"
+bc < ${inputFile}
 
 echo 'FIM'
