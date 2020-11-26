@@ -8,6 +8,18 @@
         {
             "type": "bashdb",
             "request": "launch",
+            "name": "Bash-Debug current(H-C input arguments)",
+            "cwd": "${workspaceFolder}",
+            "program": "${file}",
+            "args": ["dados", "README.md", "_templates"],
+            "terminalKind": "integrated",
+            "env": {
+                "DBG": "yes"
+              }
+        },
+        {
+            "type": "bashdb",
+            "request": "launch",
             "name": "Bash-Debug (select script from list of sh files)",
             "cwd": "${workspaceFolder}",
             "program": "${command:SelectScriptName}",

@@ -23,6 +23,12 @@ clear
 
 inputFile="${basedir}a.txt"
 echo "Avaliando ${inputFile}"
-bc < ${inputFile}
+
+echo 'Versão sem pipe: '
+bc < ${inputFile} -q
+
+echo 'Versão com pipe: '
+cat ${inputFile} | bc -q
+
 
 echo 'FIM'
