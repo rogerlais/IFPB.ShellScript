@@ -12,8 +12,22 @@ if [[ -v "${DBG_ENV}" ]]; then
     echo 'Debug mode !' &>/dev/null
 fi
 
-for ((i = 2; i < 21; i += 2)); do
+#modo 1
+for ((i = 2; i <= 21; i += 2)); do
     echo "${i}"
 done
+
+#modo 2
+for ((i = 1; i <= 21; i ++)); do
+    ((${i} % 2)) || echo "${i}"
+done
+
+#Tomando os limites por linha de comando
+for ((i = $1; i <= $2; i ++)); do
+    ((${i} % 2)) || echo "${i}"
+done
+
+
+
 
 echo 'FIM'
