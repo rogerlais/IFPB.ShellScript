@@ -9,6 +9,17 @@ DESC
 export DBG_ENV="DBG"
 if [[ -v "${DBG_ENV}" ]]; then
     #!Ajuste de depuracao! erro se linha não nula não for inserida abaixo
+    echo 'Debug mode !' &>/dev/null
+    targetDir="${PWD}/dados"
+else
+    targetDir="${PWD}"
 fi
+
+table=""
+for currFile in $targetDir/*; do
+    table+="$(md5sum ${currFile})\n"
+done
+
+echo -e ${table}
 
 echo 'FIM'

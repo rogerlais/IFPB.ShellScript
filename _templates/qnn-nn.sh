@@ -10,5 +10,10 @@ if [[ -v "${DBG_ENV}" ]]; then
     #!Ajuste de depuracao! erro se linha não nula não for inserida abaixo
     echo "debug mode!" > /dev/null
 fi
+clear
+
+
+#ponto de entrada(main)
+
 
 echo 'FIM'

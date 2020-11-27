@@ -15,6 +15,20 @@ DESC
 export DBG_ENV="DBG"
 if [[ -v "${DBG_ENV}" ]]; then
     #!Ajuste de depuracao! erro se linha não nula não for inserida abaixo
+    echo 'Debug mode !' &>/dev/null
+    targetDir=/tmp/lista5
+else
+    targetDir=${PWD}
 fi
+
+mkdir ${targetDir} #garante o base
+
+for name in {A..Z}; do
+    mkdir "${targetDir}/${name}"
+    printf '#!/usr/bin/env python3
+print(“Rapi Hellow Uin!”)
+' > "${targetDir}/${name}/${name}.py"
+    chmod +x "${targetDir}/${name}/${name}.py"
+done
 
 echo 'FIM'

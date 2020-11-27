@@ -11,7 +11,7 @@
             "name": "Bash-Debug current(H-C input arguments)",
             "cwd": "${workspaceFolder}",
             "program": "${file}",
-            "args": ["99", "150", "_templates"],
+            "args": ["num.txt", "data", "README.md"],
             "terminalKind": "integrated",
             "env": {
                 "DBG": "yes"

@@ -27,7 +27,4 @@ for ((i = $1; i <= $2; i ++)); do
     ((${i} % 2)) || echo "${i}"
 done
 
-
-
-
 echo 'FIM'
