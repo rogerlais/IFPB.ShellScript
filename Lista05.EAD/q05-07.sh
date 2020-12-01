@@ -38,4 +38,5 @@ while [ $x -lt $(($itemCount - 2)) ]; do
     x=$((${x} + 3))
 done
 
+
 echo 'FIM'

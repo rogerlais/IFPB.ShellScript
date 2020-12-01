@@ -30,8 +30,6 @@ for currFile in ${targetDir}/*; do
 done
 echo -e "${outStr}" | sort
 
-
-
 #Melhoria final, caminho de listagem recebido por cl
 targetDir=$1
 outStr=""

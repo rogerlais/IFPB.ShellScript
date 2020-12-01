@@ -18,4 +18,5 @@ for argItem in $*; do
     [ -f $argItem ] && echo "${argItem} - SIM" || echo "${argItem} - NAO"
 done
 
+
 echo 'FIM'

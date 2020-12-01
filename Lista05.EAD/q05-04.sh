@@ -25,7 +25,7 @@ for ((i = $START_LIMIT; i <= $END_LIMIT; i++)); do
 done
 #conta as linhas salvas e compara
 found=$(cat num.txt | wc -l)
-if [ $found -eq $END_LIMIT ];then
+if [ $found -eq $END_LIMIT ]; then
     echo "Arquivo OK com ${found} linhas"
 else
     echo "Falha em arquivo. Foram encontradas ${found} linhas"
@@ -33,10 +33,9 @@ fi
 
 #itera e soma as linhas do arquivo
 acc=0
-for line in $(cat num.txt); do 
+for line in $(cat num.txt); do
     acc=$((acc + line))
 done
 echo "A soma total das linhas é: ${acc}"
-
 
 echo 'FIM'

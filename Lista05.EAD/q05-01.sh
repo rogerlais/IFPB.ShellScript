@@ -18,12 +18,12 @@ for ((i = 2; i <= 21; i += 2)); do
 done
 
 #modo 2
-for ((i = 1; i <= 21; i ++)); do
+for ((i = 1; i <= 21; i++)); do
     ((${i} % 2)) || echo "${i}"
 done
 
 #Tomando os limites por linha de comando
-for ((i = $1; i <= $2; i ++)); do
+for ((i = $1; i <= $2; i++)); do
     ((${i} % 2)) || echo "${i}"
 done
 

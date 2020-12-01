@@ -1,0 +1,22 @@
+Lista 6 (Condicionais :: if)
+
+1 - Escreva um script chamado help_test.sh. Este deve receber um ou mais parâmetros de linha de comando. Se um destes parâmetros for “logica”, o script deve imprimir uma ajuda sobre os parâmetros lógicos do comando test. Se um destes parâmetros for “aritmetica”, o script deve imprimir uma ajuda sobre os parâmetros aritméticos do comando test. Se um destes parâmetros for “strings”, o script deve imprimir uma ajuda sobre os parâmetros para strings do comando test. Se um destes parâmetros for “variáveis”, o script deve imprimir uma ajuda sobre os parâmetros para variáveis do comando test. Se um destes parâmetros for “arquivos”, o script deve imprimir uma ajuda sobre os parâmetros sobre arquivos do comando test. Se um destes parâmetros for "lógica", o script deve imprimir uma ajuda sobre os parâmetros lógicos do comando test.
+
+2 - Se você cria uma variável no shell atual e usa o comando export, esta variável fica disponível em qualquer script chamado a partir do shell atual. Ex.:
+
+a=10
+export a
+./teste.sh
+
+Se executar “echo $a” dentro do script teste.sh, este imprimirá 10. Sem o export, a variável “a” não existiria. Escreva um script que teste se as variáveis a, b e c existem (e têm valor diferente de vazio). Peça para o usuário digitar um valor para cada uma que não existir. Exiba os valores das variáveis a b e c na tela.
+
+3 - Escreva um script que receba uma lista de arquivos como parâmetros de linha de comando e exiba na tela os arquivos que são executáveis.
+
+4 - Escreva um script que receba 3 nomes de arquivos como argumentos de linha de comando. Verifique se pelo menos 2 destes arquivos passaram do tamanho crítico, que significa ter 5 linhas ou mais.
+
+5 - Escreva um script que imprima a palavra DIRETORIOS e abaixo liste todos os diretórios da pasta atual. Em seguida imprima a palavra ARQUIVOS e abaixo liste todos os arquivos da pasta atual. Por fim, imprima a palavra LINKS e abaixo liste todos os links simbólicos da pasta atual.
+
+6 - Usando o comando if, escreva um script que verifique a existência de arquivos com o mesmo número de linhas no diretório atual. Caso existam, imprima o nome dos arquivos duplicados. Quando listar, verifique (usando if) se os parâmetros são arquivos ou diretórios.
+
+7 - [PESQUISA] Escreva um script que exiba o arquivo mais recente (cuja criação ou modificação foi realizada mais tarde) do diretório atual.
+
