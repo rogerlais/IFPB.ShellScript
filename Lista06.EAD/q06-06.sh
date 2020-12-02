@@ -24,41 +24,29 @@ clear
 strList=""
 for currFile in $targetDir/*; do
     if [ -f "${currFile}" ] && [ -r "${currFile}" ]; then
-        #line="$(wc -l "${currFile}")\n"
         currLine="$(cat "${currFile}" | wc -l)"
-        line="$(printf "%05d" ${currLine})\\${currFile}\n"
-        #echo "${line}"
-        #echo -e "${line}"
+        line="$(printf "%05d" ${currLine})\\${currFile}\n" #\\ como separador
         strList+="${line}"
-        #echo "${strList}"
     fi
 done
-echo -e "nativa= \n${strList}"
 sortedStrList=$(echo -e "${strList}" | sort)
-echo -e "ordenada= \n${sortedStrList}"
-sortedStrList=$(echo -e "${sortedStrList}" | tr '\\' '\n')
-echo -e "ordenada= \n${sortedStrList}"
-echo "ordenada= ${sortedStrList}"
-
-#read -r -a items <<<${sortedStrList} #!importar items com espacos nos nomes - tem tab
-#declare -a arr="($(<<<${sortedStrList}))"
-
-#IFS='\n ' read -r -a items <<<${sortedStrList} #!importar items com espacos nos nomes - tem tab
-IFS=$'\n' read -d '' -r -a items <<< ${sortedStrList}
+sortedStrList=$(echo -e "${sortedStrList}" | tr '\\' '\n') #Troca separador anterior por \n
+echo -e ${sortedStrList}
+IFS=$'\n' read -d '' -r -a items <<<${sortedStrList}
 
 itemCount=${#items[@]}
-echo "linhas = ${itemCount}"
-echo "${items[@]}"
 x=0
-while [ $x -lt $(($itemCount - 2)) ]; do
+while [ $x -lt $(($itemCount - 1)) ]; do
     lines=${items[$x]}
     fname=${items[$x + 1]}
-    nextLines=${items[$x + 2]}
-    if [ ${nextLines} -eq ${lines} ]; then
-        echo -e "Encontrado arquivo repetido ${fname} com ${items[$x + 4]} linhas = ${lines} para ambos"
-        x=$((${x} + 3)) #Salta para testar o proximo
+    if [ $x -lt $(($itemCount - 1)) -a ${lines} == ${items[$x + 2]} ]; then
+        echo -e "Encontrada duplicidade para arquivo ${fname}. Todos com ${lines} linhas. São ele(s):"
+        while [[ ($x -lt $(($itemCount - 1))) && (${lines} == ${items[$x + 2]}) ]]; do
+            echo -e "${items[$x + 1]}"
+            x=$((${x} + 2)) #Salta para testar o proximo
+        done
     fi
-    x=$((${x} + 3))
+    x=$((${x} + 2)) #Salta para testar o proximo
 done
 
 echo 'FIM'
