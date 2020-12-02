@@ -1,3 +1,4 @@
+//modificado posteriormente
 {
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
@@ -5,18 +6,6 @@
     // ROGER terminalkind ajustado para script interativo
     "version": "0.2.0",
     "configurations": [
-        {
-            "type": "bashdb",
-            "request": "launch",
-            "name": "Bash-Debug current(H-C input arguments)",
-            "cwd": "${workspaceFolder}",
-            "program": "${file}",
-            "args": ["./Lista06.EAD/q06-01.sh", "/tmp/shell/teste.txt", "./Lista06.EAD/q06-03.sh", "./Lista06.EAD/requisitos.txt", "inexiste"],
-            "terminalKind": "integrated",
-            "env": {
-                "DBG": "yes"
-              }
-        },
         {
             "type": "bashdb",
             "request": "launch",

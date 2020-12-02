@@ -14,6 +14,9 @@ clear
 
 
 #ponto de entrada(main)
+for fname in $@; do
+    [ -x ${fname} ] && echo "${fname} é executável."
+done
 
 
 echo 'FIM'
