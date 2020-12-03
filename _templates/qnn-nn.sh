@@ -15,5 +15,4 @@ clear
 
 #ponto de entrada(main)
 
-
 echo 'FIM'
