@@ -17,6 +17,13 @@
                 "DBG": "yes"
               }
         },
+
+
+
+
+
+
+
         {
             "type": "bashdb",
             "request": "launch",

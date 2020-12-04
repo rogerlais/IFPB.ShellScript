@@ -11,7 +11,7 @@
             "name": "Bash-Debug current(H-C input arguments)",
             "cwd": "${workspaceFolder}",
             "program": "${file}",
-            "args": ["./Lista06.EAD/q06-01.sh", "/tmp/shell/teste.txt", "./Lista06.EAD/q06-03.sh", "./Lista06.EAD/requisitos.txt", "inexiste"],
+            "args": ["${PWD}/dados/dado2.txt", "2", "./Lista06.EAD/q06-03.sh", "./Lista06.EAD/requisitos.txt", "inexiste"],
             "terminalKind": "integrated",
             "env": {
                 "DBG": "yes"

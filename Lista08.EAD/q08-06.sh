@@ -1,6 +1,6 @@
 #!/bin/bash
 
-<< 'DESC'
+<<'DESC'
 Escreva um script que exiba um arquivo parte por parte (digamos 10 caracteres em cada parte), esperando por um enter, até o fim do arquivo.
 
 Por exemplo, considere o arquivo:
@@ -29,11 +29,25 @@ DESC
 export DBG_ENV="DBG"
 if [[ -v "${DBG_ENV}" ]]; then
     #!Ajuste de depuracao! erro se linha não nula não for inserida abaixo
-    echo "debug mode!" > /dev/null
+    echo "debug mode!" >/dev/null
+    dataFile="${PWD}/dados/datafile08-06.txt"
+else
+    dataFile=${1}
 fi
 clear
 
-
 #ponto de entrada(main)
+content="dummy"
+start=1
+stop=10
+until [ ! -n "${content}" ]; do
+    content=$(cut -c "${start}-${stop}" "${dataFile}")
+    if [ -n "${content}" ]; then
+        echo "${content}"
+        ((start += 10))
+        ((stop += 10))
+        read -p "Pressione <ENTER> para continar.." dummy
+    fi
+done
 
 echo 'FIM'

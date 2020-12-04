@@ -1,6 +1,6 @@
 #!/bin/bash
 
-<< 'DESC'
+<<'DESC'
 Considere o seguinte arquivo ips.txt:
 
 8.8.8.8
@@ -25,11 +25,14 @@ DESC
 export DBG_ENV="DBG"
 if [[ -v "${DBG_ENV}" ]]; then
     #!Ajuste de depuracao! erro se linha não nula não for inserida abaixo
-    echo "debug mode!" > /dev/null
+    echo "debug mode!" >/dev/null
+    dataFile="${PWD}/dados/ips.txt"
+else
+    dataFile=${1}
 fi
 clear
 
-
 #ponto de entrada(main)
+sort "${dataFile}" | uniq -d
 
 echo 'FIM'
