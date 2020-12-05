@@ -5,8 +5,9 @@ Escreva um script que use o laço while para contar quantas linhas de um arquivo
 DESC
 
 #dados forcados
-export DBG_ENV="DBG"
-if [[ -v "${DBG_ENV}" ]]; then
+export DBG_ENV=$(test "${DBG^^}" == "'YES'" && echo "1" || echo "0")
+
+if ((${DBG_ENV})); then
     #!Ajuste de depuracao! erro se linha não nula não for inserida abaixo
     echo "debug mode!" >/dev/null
     targetFile=${PWD}/dados/datafile07-04.txt

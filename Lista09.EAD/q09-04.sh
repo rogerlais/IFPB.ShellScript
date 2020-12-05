@@ -1,7 +1,7 @@
 #!/bin/bash
 
 << 'DESC'
-Escreva um script que receba uma lista de arquivos como parâmetros de linha de comando e exiba na tela os arquivos que são executáveis.
+Escreva um script que valide as seguintes regras para criação de senha: pelo menos uma letra maiúscula, uma letra minúscula e um número. Validar significa receber uma senha e dizer se esta obedece ao padrão ou não.
 DESC
 
 #dados forcados
@@ -15,9 +15,5 @@ clear
 
 
 #ponto de entrada(main)
-for fname in $@; do
-    [ -x ${fname} ] && echo "${fname} é executável."
-done
-
 
 echo 'FIM'

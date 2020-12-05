@@ -11,8 +11,9 @@ echo "Executando em: ${PWD}"
 fname=$1
 
 #dados forcados
-export DBG_ENV="DBG"
-if [[ -v "${DBG_ENV}" ]]; then
+export DBG_ENV=$(test "${DBG^^}" == "'YES'" && echo "1" || echo "0")
+
+if ((${DBG_ENV})); then
     fname="${PWD}/Lista03.EAD/q03-03.sh"
 fi
 

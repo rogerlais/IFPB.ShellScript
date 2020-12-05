@@ -1,7 +1,7 @@
 #!/bin/bash
 
 << 'DESC'
-Escreva um script que receba uma lista de arquivos como parâmetros de linha de comando e exiba na tela os arquivos que são executáveis.
+Escreva um script que valide um número qualquer em formato moeda do Brasil: R$ 1.000,00. Validar significa dizer se o número está no padrão ou não.
 DESC
 
 #dados forcados
@@ -15,9 +15,5 @@ clear
 
 
 #ponto de entrada(main)
-for fname in $@; do
-    [ -x ${fname} ] && echo "${fname} é executável."
-done
-
 
 echo 'FIM'

@@ -22,8 +22,9 @@ Escreva um script para listar apenas os ips sem repetição. Isto é, remover as
 DESC
 
 #dados forcados
-export DBG_ENV="DBG"
-if [[ -v "${DBG_ENV}" ]]; then
+export DBG_ENV=$(test "${DBG^^}" == "'YES'" && echo "1" || echo "0")
+
+if ((${DBG_ENV})); then
     #!Ajuste de depuracao! erro se linha não nula não for inserida abaixo
     echo "debug mode!" >/dev/null
     dataFile="${PWD}/dados/ips.txt"

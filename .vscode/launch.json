@@ -11,11 +11,15 @@
             "name": "Bash-Debug current(H-C input arguments)",
             "cwd": "${workspaceFolder}",
             "program": "${file}",
-            "args": ["${PWD}/dados/dado2.txt", "2", "./Lista06.EAD/q06-03.sh", "./Lista06.EAD/requisitos.txt", "inexiste"],
+            "args": [
+                "-l",
+                "-p",
+                "/media/bash-ifpb/IFPB.ShellScript/dados/datafile09-02.txt"
+            ],
             "terminalKind": "integrated",
             "env": {
                 "DBG": "yes"
-              }
+            }
         },
         {
             "type": "bashdb",
@@ -27,7 +31,7 @@
             "terminalKind": "integrated",
             "env": {
                 "DBG": "yes"
-              }
+            }
         },
         {
             "type": "bashdb",
@@ -37,7 +41,7 @@
             "terminalKind": "integrated",
             "env": {
                 "DBG": "yes"
-              }
+            }
         }
     ]
 }

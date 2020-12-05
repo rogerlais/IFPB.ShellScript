@@ -7,8 +7,9 @@ Escreva um script que execute o comando ping para o site www.google.com e que, a
 DESC
 
 #dados forcados
-export DBG_ENV="DBG"
-if [[ -v "${DBG_ENV}" ]]; then
+export DBG_ENV=$(test "${DBG^^}" == "'YES'" && echo "1" || echo "0")
+
+if ((${DBG_ENV})); then
     #Ajuste de depuracao
     echo 'debug mode!'
 fi
@@ -19,7 +20,7 @@ pingCount=5
 
 ping -c ${pingCount} $target | tee -a ${resultFile}
 
-if [[ -v "${DBG_ENV}" ]]; then
+if ((${DBG_ENV})); then
     #exibe saida como debug
     cat ${resultFile}
 fi
