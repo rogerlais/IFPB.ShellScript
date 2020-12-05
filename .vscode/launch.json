@@ -12,8 +12,9 @@
             "cwd": "${workspaceFolder}",
             "program": "${file}",
             "args": [
-                "-l",
-                "-p",
+                //"-l",
+                "c",
+                "-f",
                 "/media/bash-ifpb/IFPB.ShellScript/dados/datafile09-02.txt"
             ],
             "terminalKind": "integrated",
