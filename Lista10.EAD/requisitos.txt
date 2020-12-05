@@ -1,0 +1,18 @@
+Todas as soluções devem usar o comando sed com expressões regulares.
+
+1 - Escreva um script que, baseado em opções de linha de comando:
+a - Remova todas as letras de um arquivo.
+b - Remova todos os dígitos de um arquivo.
+c - Remova todos os caracteres que não são letras nem dígitos de um arquivo.
+
+2 - Dado um arquivo cuja primeira linha é o título e as linhas seguintes são ítens de uma lista. Escreva um script que crie um arquivo html completo usando o conteúdo do arquivo de entrada. Exemplo de arquivo:
+
+    Lista de IPs
+    8.8.8.8
+    8.8.4.4
+    127.0.0.1
+    123.123.123.1
+
+3 - Escreva um script que remova todos os números de telefone de um arquivo de entrada, alterando o seu valor para **CENSURADO**.
+
+4 - Escreva um script que, dado uma lista de CPFs no formato xxxxxxxxxxx, coloque cada cpf no formato xxx.xxx.xxx-xx.
