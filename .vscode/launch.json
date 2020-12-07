@@ -12,10 +12,10 @@
             "cwd": "${workspaceFolder}",
             "program": "${file}",
             "args": [
+                "/media/bash-ifpb/IFPB.ShellScript/dados/datafile09-02.txt",
                 //"-l",
                 "c",
-                "-f",
-                "/media/bash-ifpb/IFPB.ShellScript/dados/datafile09-02.txt"
+                "-f"
             ],
             "terminalKind": "integrated",
             "env": {
