@@ -1,0 +1,36 @@
+Lista 12 (Arrays e Strings)
+
+Todas as soluções devem usar Arrays.
+
+1 - Escreva um script que peça para o usuário digitar um conjunto de números na mesma linha, separados por espaço (podem ser vários números, o usuário decide quantos) e exiba o menor deles.
+
+2 - Considere o seguinte arquivo:
+
+    A 10
+    B 20
+    A 15
+    C 12
+    D 21
+    B 12
+    C 21
+
+Escreva um script que, para cada nome na coluna 1, some os números da coluna 2, totalizando-os. Use arrays associativos, pois os nomes da coluna 1 podem mudar.
+
+3 - Considere o seguinte arquivo com nomes reais de pessoas:
+
+Ana Thereza Vasques
+Brissa Silvia Bracchi
+Dehbora Kaynahra Patricia da Silva
+Graucia Adyana Dantas Pereira
+Ysabelle Aciole Lhima Santos de Oliveirah
+Marylih Rodriguez Fehlixis
+
+Escreva um script que abrevie o nome da cada pessoa na lista. Use arrays e strings.
+Exemplo de saída:
+
+Ana T. Vasques
+Brissa S. Bracchi
+Dehbora K. P. d. Silva
+Graucia A. D. Pereira
+Ysabelle A. L. S. d. Oliveirah
+Marylih R. Fehlixis
