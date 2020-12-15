@@ -7,5 +7,7 @@
 			"path": "../ssresmon"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"todo-tree.tree.scanMode": "workspace"
+	}
 }
