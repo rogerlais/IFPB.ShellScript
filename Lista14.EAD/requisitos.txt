@@ -1,0 +1,23 @@
+
+Lista 14 (Scripts de Inicialização)
+
+
+1 - Escreva um script que exiba a data atual e uma mensagem motivacional aleatória. Faça que esse script seja executado todas as vezes que seu usuário faça login no sistema.
+
+2 - Escreva um script que remova todos os arquivos da pasta /home/<seu_user>/tmp. Faça que este script seja executado todas as vezes que o computador for ligado.
+
+
+
+
+
+
+
+
+
+
+
+
+
+lixo=$(ps -f -o args= $PPID)
+read -r -a alixo <<<$lixo  #pode-se usar parser para capturar "--\b" e o caminho do script principal
+printf "%s\n" "${alixo[@]}"
