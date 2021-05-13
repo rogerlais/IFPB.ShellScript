@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "../ssresmon"
+		},
+		{
+			"path": "../../sf_Static_Share/Apolo"
 		}
 	],
 	"settings": {
