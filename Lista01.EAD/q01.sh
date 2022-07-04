@@ -1,3 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 echo "Vamo que vamo!"
+echo "$(hostname)"
